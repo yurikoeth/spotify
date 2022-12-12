@@ -4,7 +4,7 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 
 //sets a new variable called redirectUri and sets it to the project's online location
-const redirectUri = "https://teal-macaron-303033.netlify.app/";
+const redirectUri = "https://sp0tify-clone.netlify.app/";
 
 // the client id provided by spotify for this project
 const clientId = "8917fb589ca44da58300475afba215a9"
