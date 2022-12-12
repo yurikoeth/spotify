@@ -23,7 +23,7 @@ const [{playlists}] = useDataLayerValue();
     <div className={styles.sidebarContainer}>
            <div className={styles.sidebarFlexbox}>
               <div className={styles.logoContainer}>
-                <img className={styles.logo} src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg"/> 
+                <img className={styles.logo} src="https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg" alt="spotify logo"/> 
               </div>
               <SidebarOption Icon={HomeIcon} option="Home"/>
               <SidebarOption Icon={SearchIcon} option="Search"/>
