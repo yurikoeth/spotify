@@ -3,7 +3,7 @@ import { Avatar } from '@mui/material'
 import { useDataLayerValue } from "./DataLayer.js"
 const Header = () => {
 
-    const [{user}, dispatch] = useDataLayerValue();
+    const [{user}] = useDataLayerValue();
 
     const styles = {
       headerContainer: "flex justify-between w-full",

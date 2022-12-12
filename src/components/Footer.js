@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 import { useDataLayerValue } from "./DataLayer.js";
 import { Grid, Slider } from '@mui/material';
 
@@ -21,7 +21,7 @@ const Footer = ({spotify}) => {
         volume: "w-6 h-6 mt-1 hover:scale-125 transition duration-700 ease-in-out",
     }
 
-    const [{token, item, playing}, dispatch] = useDataLayerValue();
+    const [{item, playing}, dispatch] = useDataLayerValue();
 
     useEffect(() => {
       spotify.getMyCurrentPlaybackState().then((r) => {
@@ -37,7 +37,7 @@ const Footer = ({spotify}) => {
         item: r.item,
        });
       });
-    }, [spotify]);
+    }, [spotify, dispatch]);
 
     const handlePlayPause = () => {
       if (playing) {

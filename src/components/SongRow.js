@@ -11,7 +11,7 @@ const SongRow = ({track}) => {
   }
   return (
     <div className={styles.songRow}>
-        <img className={styles.songRowAlbum} src={track.album.images[0].url} alt=""></img>
+        <img className={styles.songRowAlbum} src={track.album.images[0].url} alt={track.album.name}></img>
         <div className={styles.songRowInfo}>
             <h1 className={styles.songRowInfoH1}>{track.name}</h1>
             <p className={styles.songRowInfoP}>

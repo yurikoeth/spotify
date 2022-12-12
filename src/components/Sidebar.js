@@ -3,7 +3,6 @@ import SidebarOption from './SidebarOption'
 import HomeIcon from '@mui/icons-material/Home';
 import SearchIcon from '@mui/icons-material/Search';
 import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
-import { style } from '@mui/system';
 import { useDataLayerValue } from './DataLayer';
 
 
@@ -18,7 +17,7 @@ const Sidebar = () => {
         playlists: "text-white text-sm",
         horizontalRow: "mt-2 border-gray-800",
     }
-const [{playlists}, dispatch] = useDataLayerValue();
+const [{playlists}] = useDataLayerValue();
     
   return (
     <div className={styles.sidebarContainer}>

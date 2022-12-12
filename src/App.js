@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect} from "react";
 import SpotifyWebApi from "spotify-web-api-js";
 import Login from "./components/Login.js"
 import { getTokenFromUrl } from "./components/spotify.js";
@@ -11,7 +11,7 @@ function App() {
   
   // creates the token variable and the setToken state. Setting it to null
 
-  const [{user, token}, dispatch] = useDataLayerValue();
+  const [{token}, dispatch] = useDataLayerValue();
   /* uses use effect to set a new variable named hash, which uses the getTokenFromUrl() 
       function from spotifyjs. This function strips the   
   */
@@ -40,7 +40,7 @@ function App() {
       spotify.getMe().then((user) => {
         dispatch({
           type: 'SET_USER',
-          user: user
+          user: user,
       })
     })
 
@@ -69,10 +69,8 @@ dispatch({
   type: "SET_SPOTIFY",
   spotify: spotify,
 });
-
   }
-    
-  }, []);
+}, [token, dispatch]);
 
   const style = {
     app: "bg-black h-fit"

@@ -87,7 +87,7 @@ const Body = ({spotify}) => {
               </svg>
             </div>
             {discover_weekly?.tracks.items.map(item =>{
-              return <SongRow key={item} track={item.track}/>
+              return <SongRow playSong={playSong} track={item.track}/>
             })}
         </div>
         </div>
